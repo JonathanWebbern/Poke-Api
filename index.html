@@ -1,0 +1,40 @@
+<html>
+    <!--
+        UI
+            - responsive cards
+            - refactor
+                - js
+                - css
+                - html
+    -->
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="reset.css">      
+        <link rel="stylesheet" href="style.css">  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <a name="page-top"></a>
+        <nav class="flex-box">
+            <img id="logo" src="images/pokemonlogo.png" href="index.html" />
+        </nav>
+        <div id="loading-overlay" class="display-none">
+            <img id="loading-icon" src="images/Pokeball.PNG" />
+            <h4>Loading Pokemon...</h4>
+        </div>
+        <div id="content-container" class="flex-box">
+            <ul id="pagination-ul" class="flex-box">
+                <li>Page</li>
+                <li onclick="getPokemonRange(0, 50, this)"><a href="#" class="pagination-a selected-page">1</a></li>
+                <li onclick="getPokemonRange(51, 50, this)"><a href="#" class="pagination-a">2</a></li>
+                <li onclick="getPokemonRange(102, 49, this)"><a href="#" class="pagination-a">3</a></li>
+            </ul>
+            <div id="card-container" class="flex-box"></div>
+            <a id="back-to-top" href="#page-top">Back to top</a>
+        </div>
+        <footer class="flex-box">
+            <p>Created by Jonathan Webbern using the <a href="https://pokeapi.co/">PokeApi</a>.</p>
+        </footer>
+    </body>
+</html>
+<script src="js.js"></script>
